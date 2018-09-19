@@ -4,7 +4,7 @@
     }
 
     var container, CANVAS_WIDTH, CANVAS_HEIGHT;
-    var camera, controls, scene, renderer;
+    var camera, controls, scene, model, renderer;
     var lighting, ambient, keyLight, fillLight, backLight;
     init();
 
@@ -53,6 +53,7 @@
 
         objLoader.load('galaxy.obj', function(object) {
           scene.add(object);
+          model = object;
         });
       });
 
@@ -104,5 +105,6 @@
     }
 
     function render() {
+      model.rotation.y += 0.0125;
       renderer.render(scene, camera);
     }

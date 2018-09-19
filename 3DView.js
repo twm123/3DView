@@ -20,7 +20,9 @@
 
       /* Camera */
       camera = new THREE.PerspectiveCamera(45, CANVAS_WIDTH / CANVAS_HEIGHT, 1, 1000);
-      camera.position.z = 3;
+      camera.position.x = 0;
+      camera.position.y = 0;
+      camera.position.z = 10;
 
       /* Scene */
       scene = new THREE.Scene();

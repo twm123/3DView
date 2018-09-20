@@ -6,28 +6,66 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="three.js"></script>
-  <script src="Detector.js"></script>
-  <script src="OrbitControls.js"></script>
-  <script src="OBJLoader.js"></script>
-  <script src="MTLLoader.js"></script>
+  <script src="javascript/three.js"></script>
+  <script src="javascript/Detector.js"></script>
+  <script src="javascript/OrbitControls.js"></script>
+  <script src="javascript/OBJLoader.js"></script>
+  <script src="javascript/MTLLoader.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/scenario_pane_styles.css">
 
 </head>
 
 <body>
   <div id="skybox">
+
     <div id="canvas"></div>
-    <script src="3DView.js"></script>
-    <div id = "scenario_selection">
-    </div>
-    <div id = "ui_top">
-    </div>
-    <div id = "ui_bottom">
-    </div>
-    <div id = "ui_left">
-    </div>
+    <script src="javascript/3DView.js"></script>
+
+    <div id="ui_left">
+    </div> <!-- ####### End ui_left ####### -->
+
+    <div id="scenario_pane">
+
+      <p>Repair Scenarios</p>
+      <div id="accordion_wrapper">
+        <div class="tab">
+          <input id="tab-one" type="checkbox" name="tabs">
+          <label for="tab-one">Label One</label>
+          <div class="tab-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-two" type="checkbox" name="tabs">
+          <label for="tab-two">Label Two</label>
+          <div class="tab-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+          </div>
+        </div>
+        <div class="tab">
+          <input id="tab-three" type="checkbox" name="tabs">
+          <label for="tab-three">Label Three</label>
+          <div class="tab-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+          </div>
+        </div>
+      </div>
+      <button class="bug_rpt">
+        <img src="assets/bug.png" />
+      </button>
+
+    </div><!-- ####### End scenario_pane ####### -->
+
+    <div id="ui_top">
+    </div> <!-- ####### End ui_top ####### -->
+
+    <div id="ui_bottom">
+    </div> <!-- ####### End ui_bottom ####### -->
+
   </div>
 </body>
 

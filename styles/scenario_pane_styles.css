@@ -1,0 +1,111 @@
+#scenario_pane {
+    background: hsl(0, 0%, 25%);
+    border: 1px solid hsl(0, 0%, 30%);
+    width: 12.5%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    margin: 0px;
+    padding: 0px;
+    top: 0%;
+    left: 87.5%;
+}
+
+#scenario_pane p {
+  position: relative;
+  height: 5%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bug_rpt {
+	background-color:#333333;
+	border:1px solid #333333;
+	height:4%;
+	width: 3.5%;
+  position: fixed;
+  top: 96%;
+  left: 96.5%;
+
+}
+
+.bug_rpt:hover {
+	background-color:#262626;
+}
+
+.bug_rpt:active {
+	background-color:#161616;
+	border:1px solid #333333;
+}
+
+/* Acordeon styles */
+#accordion_wrapper {
+  height: 100%;
+  max-height: 75vh;
+  overflow: hidden;
+  top: 5%;
+}
+
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #005566;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #007f99;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 50%;
+  overflow-y: scroll;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab input[type=checkbox] + label::after {
+  content: "+";
+}
+
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
